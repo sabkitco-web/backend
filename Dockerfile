@@ -1,6 +1,9 @@
 # Use Node 18 official image
 FROM node:18
 
+# Install ffmpeg
+RUN apt-get update && apt-get install -y ffmpeg
+
 # Set working directory inside container
 WORKDIR /usr/src/app
 
