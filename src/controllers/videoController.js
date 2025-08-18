@@ -2,7 +2,11 @@ const stream = require("stream");
 const ffmpeg = require("fluent-ffmpeg");
 const { AUDIO_FORMAT_MAP } = require("../utils/const");
 
-ffmpeg.setFfmpegPath("/opt/homebrew/bin/ffmpeg");
+//  for local 
+// ffmpeg.setFfmpegPath("/opt/homebrew/bin/ffmpeg"); 
+
+// for vm
+ffmpeg.setFfmpegPath("/usr/bin/ffmpeg");
 
 async function extractAudio(req, res) {
   try {
